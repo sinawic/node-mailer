@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  node-mailer:
+    image: node-mailer
+    restart: always
+    env_file:
+      - .env
+    build:
+      context: ./
+    ports:
+      - "3000:3000"
